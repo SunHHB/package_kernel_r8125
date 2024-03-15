@@ -11,7 +11,7 @@ on:
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
   KMOD_VERSION: 9.012.03
-  RELEASE_URL: https://github.com/SunHHB/package_kernel_r8168/raw/master/.github/workflows/OpenWrt-NIC-Drivers-release.txt
+  RELEASE_URL: https://github.com/SunHHB/package_kernel_r8125/raw/master/OpenWrt-NIC-Drivers-release.txt
 
 jobs:
   build_r8125_Modules:
