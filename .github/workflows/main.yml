@@ -3,14 +3,14 @@ name: Build Realtek r8125 driver for OpenWrt
 on:
   push:
     tags:
-      - 9.**
+      - *.*
   # schedule:
   #   - cron: "0 0 * * MON"
 
 
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-  KMOD_VERSION: 9.012.03
+  KMOD_VERSION: 9.012.04
   RELEASE_URL: https://github.com/SunHHB/package_kernel_r8125/raw/master/OpenWrt-NIC-Drivers-release.txt
 
 jobs:
@@ -83,7 +83,7 @@ jobs:
 
     steps:
     - name: Download build artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4
       with:
         name: ${{ env.KMOD_VERSION }}
 
@@ -98,7 +98,7 @@ jobs:
 
 
     - name: Upload firmware to release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       env:
         GITHUB_TOKEN: ${{ secrets.ACTION_GITHUB_TOKEN }}
       with:
