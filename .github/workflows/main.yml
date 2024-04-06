@@ -10,7 +10,7 @@ on:
 
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-  KMOD_VERSION: 9.012.04
+  KMOD_VERSION: 9.012.03
   RELEASE_URL: https://github.com/SunHHB/package_kernel_r8125/raw/master/OpenWrt-NIC-Drivers-release.txt
 
 jobs:
